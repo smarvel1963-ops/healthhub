@@ -4,7 +4,7 @@
  * engine in ../dayhub/, cached here too. NETWORK FIRST (same rule as Day Hub's
  * sw.js): online = always the newest files, the cache is only the offline fallback.
  * Updates are announced by ../dayhub/version.json - this file rarely changes. */
-const CACHE = "healthhub-v1";
+const CACHE = "healthhub-v2";
 const SHELL = ["./", "index.html", "manifest.json", "icon-192.png", "icon-512.png", "icon-180.png",
   "../dayhub/styles.css", "../dayhub/features.js", "../dayhub/app.js", "../dayhub/scenes.js", "../dayhub/cruise.js", "../dayhub/shell.js", "../dayhub/trip.js", "../dayhub/ships.js", "../dayhub/health.js", "../dayhub/ui.js", "../dayhub/privacy.html", "../dayhub/terms.html"];
 self.addEventListener("install", e => {
