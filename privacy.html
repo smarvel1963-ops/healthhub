@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- SAVE AS: privacy.html · LOCATION: C:/MarvelApps/healthhub/privacy.html
+     Health Hub privacy policy (app v1.56, 2026-10-22). Required for the Google Play listing and its health-data rules.
+     Same structure as Day Hub's (C:/MarvelApps/dayhub/privacy.html). Plain words; only claims the code actually backs
+     (shared Hub engine in the Day Hub repo, DH_MODE "health" + health.js). Update the date line whenever a data flow
+     changes - in particular BEFORE the friend step challenges (CHALLENGES switch, off) are ever turned on. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Health Hub Privacy</title>
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <style>
+    :root { --bg: #0b1020; --fg: #e8ecf8; --dim: #9aa6c4; --accent: #7dd3fc; --line: rgba(255,255,255,.12); }
+    @media (prefers-color-scheme: light) { :root { --bg: #f7f8fc; --fg: #141a2e; --dim: #4b5675; --accent: #0369a1; --line: rgba(0,0,0,.12); } }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 28px 16px 60px; }
+    h1 { font-size: 28px; margin: 0 0 4px; } h2 { font-size: 19px; margin: 28px 0 6px; }
+    .dim { color: var(--dim); font-size: 14px; } a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; } td, th { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+    th { font-size: 13px; color: var(--dim); font-weight: 600; }
+  </style>
+</head>
+<body><main>
+  <h1>Health Hub privacy policy</h1>
+  <p class="dim">Health Hub is an app by Marvel Corp, part of the Hub family of apps. Last updated October 22, 2026.</p>
+
+  <h2>The short version</h2>
+  <p>What you log in Health Hub stays on your phone. We have no Health Hub account system and no database of your health information. There are no ads, no ad trackers and no analytics in the app. Your health information is never sold, never used for advertising and never shared with insurers, employers or data brokers. Two optional AI features send some of it to an AI service to answer you - only when you use them - and each one is listed below.</p>
+  <p>Health Hub is a place to keep your own records and general information. It is not medical advice and does not diagnose or treat anything. Ask your doctor or pharmacist about your health and your medicines.</p>
+
+  <h2>What stays on your phone</h2>
+  <p>Everything you type: your medicines (name, strength, label instructions, times, pills left, pharmacy, prescriber) and the doses you mark taken or skipped, appointments and the questions and notes for them, vitals (blood pressure, glucose, weight, heart rate, oxygen), sleep, water, steps (you type them in - the app does not read your phone's step counter or any health service), workouts, daily check-ins (mood, energy, symptoms, notes), your emergency card (allergies, conditions, blood type, doctor, hospital, emergency contacts), goals and settings. These are saved in your browser's storage on your phone. We cannot see them.</p>
+  <p>Photos you add to the <b>Records vault</b> (insurance card, prescriptions, lab results and so on) are kept in a separate store on your phone. They are never sent anywhere and are never put in the Google Drive backup.</p>
+  <p>If other Hub apps are on the same phone, they can show a short read-only summary from Health Hub (and Health Hub from them); that happens on the phone and nothing is sent to us.</p>
+  <p><b>Deleting:</b> ⚙ Settings → <b>Your data</b> → <b>Erase everything</b> deletes your Health Hub log on the phone, signs the phone out of Google, tells Google to drop that sign-in, and forgets saved purchase emails and the AI passphrase for every Hub app on the phone. Records-vault photos are deleted one by one in the Records vault (do that before you erase), or all at once by clearing the app's storage or uninstalling the app.</p>
+
+  <h2>What leaves your phone, and why</h2>
+  <table>
+    <tr><th>When</th><th>What is sent</th><th>To whom</th></tr>
+    <tr><td>Always (opening the app)</td><td>Normal web requests (your IP address, browser type)</td><td>GitHub Pages, which hosts the app, and Google Fonts, which supplies the lettering.</td></tr>
+    <tr><td>If you enter a city or ZIP for weather (optional, in ⚙)</td><td>The city or ZIP code you enter, then that place's map location</td><td>Open-Meteo (weather and place search). For US ZIP codes, also Zippopotam.us.</td></tr>
+    <tr><td>If you scan a medicine label with the AI (needs AI Credits or a Pro purchase)</td><td>The photo of the label you take, made smaller first</td><td>Our relay (a Google Apps Script run by Marvel Corp), which passes it to Anthropic's Claude to read the printed words (<a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic's privacy policy</a>). You check and correct every field before anything is saved. The relay does not save the photo. Without the AI, nothing is sent and you type the label in yourself.</td></tr>
+    <tr><td>If you use 🧠 Brain dump with the AI helper on</td><td>Only the text you type into it</td><td>Our relay, which passes it to Anthropic's Claude to sort it. The relay does not save your text.</td></tr>
+    <tr><td>If you use 💡 Ask with the AI helper on</td><td>Your question, and the Health Hub log it needs to answer from: medicines and doses of the last 7 days, vitals of the last 30 days, sleep, water, steps, workouts and check-ins (including symptoms and check-in notes) of the last 1-2 weeks, recent appointments with their questions and notes, and the allergies and conditions on your emergency card. Emergency contacts and vault photos are never sent. Any to-dos, lists or bills you added are included too. While the AI helper is on through a Pro purchase, the app can also make one automatic "Top 3 today" pick a day from that same information; that automatic pick never uses a paid AI credit.</td><td>Our relay, which passes it to Anthropic's Claude to get the answer. The relay does not save your text. It keeps only a count of requests per day. The AI is told to answer only from your own log and never to give medical advice, a diagnosis or dosing.</td></tr>
+    <tr><td>If you turn on backup</td><td>A copy of your Health Hub log (not the Records-vault photos)</td><td>A hidden app folder in <b>your own</b> Google Drive. Only the Hub apps on your devices can read it. We cannot. Delete it any time in ⚙ → <b>Backup &amp; sync</b> → <b>Delete my Drive backup</b>.</td></tr>
+    <tr><td>If you connect Google Calendar</td><td>The app reads your calendar events to show them and adds the events you create to your calendar</td><td>Google, directly from your phone. The sign-in token is kept on your phone and expires after about an hour.</td></tr>
+    <tr><td>If you tap Share on a doctor-visit summary</td><td>The summary text, to the app you pick</td><td>Whoever you choose in your phone's share menu. Nothing is sent to us.</td></tr>
+    <tr><td>If you have Hub AI Credits</td><td>The email you bought with and your phone's random id</td><td>Our relay, which counts the credits you paid for and keeps a number of questions used, under a scrambled (one-way) id - never your email.</td></tr>
+    <tr><td>If you unlock a Pro purchase you already have</td><td>The email you bought with (or your membership id), and a random id your phone makes for itself, to check the purchase is active and limit it to 3 phones</td><td>Our relay, which looks the purchase up with Whop, the store that sold it. The relay keeps only a scrambled (one-way) form of the account id with your phones' random ids and the day each was last seen, never your email. We never see card details. To use a purchase on a new phone, the relay emails a 6-digit code to that address (sent from Marvel Corp's Google account); it remembers only a scrambled form of the email and phone id once the code is confirmed.</td></tr>
+    <tr><td>If you turn on reminders (doses, appointments, refills)</td><td>Nothing. Reminders come from your phone itself.</td><td>No one</td></tr>
+  </table>
+
+  <h2>Friend step challenges</h2>
+  <p>Step challenges with friends are shown as "coming soon" and are not switched on. Nothing is sent for them. Before they are, this page will say exactly what they send (the plan is only a nickname you pick and your daily step totals - never your medicines, vitals or anything else).</p>
+
+  <h2>Google user data</h2>
+  <p>Health Hub's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Google data is used only to provide the features you turned on, in the app, on your phone. It is not sold, not used for advertising, not used to train AI models, and no person at Marvel Corp reads it. To disconnect, use ⚙ Settings in Health Hub or remove the app at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>. The backup copy can be deleted from Google Drive → Settings → Manage apps.</p>
+
+  <h2>Children</h2>
+  <p>Health Hub is for adults (18 and older). It is not directed at children, and we do not knowingly collect information from children under 13.</p>
+
+  <h2>Selling data</h2>
+  <p>We do not sell or rent personal information, and we never sell, rent or share health information for advertising or any other purpose. We hold almost none of it.</p>
+
+  <h2>Changes</h2>
+  <p>If what Health Hub sends anywhere changes, this page changes first, and the date at the top changes with it.</p>
+
+  <h2>Contact</h2>
+  <p>Marvel Corp, <a href="mailto:smarvel1963@gmail.com">smarvel1963@gmail.com</a></p>
+  <p class="dim"><a href="./">← Back to Health Hub</a></p>
+</main></body>
+</html>
